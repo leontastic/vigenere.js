@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1>vigenere.js: &mdash; A JavaScript Vigen&egrave;re cipher</h1>
+<h2>First and second order enciphering</h2>
+
+<script src="vigenere.js"></script>
+<script>
+
+var plaintext = "The Quick Brown Fox jumped over the Lazy Dog.";
+var key = "She sells seashells, on the seashore.";
+
+document.write("<strong>Character Set: </strong>" + charset + "<br>");
+document.write("<strong>Plaintext: </strong>" + plaintext + "<br>");
+document.write("<strong>Key: </strong>" + key + "<br>");
+document.write("<br>");
+document.write(encipher(plaintext, key) + "<strong> &larr; first order enciphering (enciphering once)</strong><br>");
+document.write(decipher(encipher(plaintext, key), key) + "<strong> &larr; deciphering a first order ciphertext</strong><br>");
+document.write("<br>");
+document.write(encipher(encipher(plaintext, key), key) + "<strong> &larr; second order enciphering (eciphering twice)</strong><br>");
+document.write(decipher(encipher(encipher(plaintext, key), key), key) + "<strong> &larr; first order deciphering on a second order ciphertext</strong><br>");
+document.write(decipher(decipher(encipher(encipher(plaintext, key), key), key), key) + "<strong> &larr; fully deciphering a second order ciphertext</strong><br>");
+
+</script>
+
+<p><strong>Download the repo to test the script yourself.</strong></p>
+
+<small><em>Written by Leon Li. Released under the MIT License.</em></small>
+
+</body>
+</html>
